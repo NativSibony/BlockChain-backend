@@ -1,0 +1,27 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js"
+  },
+  "keywords": [
+    "block",
+    "chain",
+    "blockchain",
+    "crypto",
+    "crypto currency"
+  ],
+  "author": "Nativ Sibony & Shlomi Dori",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.0.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.2.0"
+  }
+}
