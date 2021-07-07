@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 app.get("/hash", (req, res) => {
-  res.render("hash");
+  res.send("Hello World");
 });
 
 app.get("*", (req, res) => {
