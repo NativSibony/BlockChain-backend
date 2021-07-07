@@ -1,9 +1,9 @@
+const controller = require("./utils/controller");
 const express = require("express");
 const cors = require("cors");
-const port = process.env.PORT || 3000;
-const controller = require("./utils/controller");
 const app = express();
 
+const port = process.env.PORT || 3000;
 app.use(cors());
 
 app.get("/block", (req, res) => {
