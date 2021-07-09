@@ -27,13 +27,6 @@ class Block {
       this.nonce++;
       this.hash = this.calculateHash();
     }
-    console.log(
-      this.index,
-      this.previousHash,
-      this.timestamp.length,
-      this.nonce,
-      JSON.stringify(this.transaction)
-    );
     // console.log("BLOCK MINED: " + this.hash);
   }
 }
