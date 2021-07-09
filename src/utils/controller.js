@@ -8,8 +8,8 @@ const { BlockChain, Block } = require("./blockchain");
 
 // new Date().toLocaleDateString()
 
-const blockCall = (index, timestamp, data, previousHash) => {
-  const block = new Block(index, timestamp, data, previousHash);
+const blockCall = (index, timestamp, transaction, previousHash) => {
+  const block = new Block(index, timestamp, transaction, previousHash);
   block.mineBlock(4);
   return JSON.stringify(block, null, 4);
 };

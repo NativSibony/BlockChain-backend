@@ -3,11 +3,13 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 app.use(cors());
 
 app.get("/block", (req, res) => {
-  let ans = controller.blockCall(1, "01/01/1970", {}, 1);
+  const blockNum = req.query.num;
+  const blockData = JSON.parse(req.query.data);
+  const ans = controller.blockCall(blockNum, "", blockData, blockNum);
 
   res.send(JSON.parse(ans));
 });
