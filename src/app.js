@@ -7,7 +7,7 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 
 app.get("/block", (req, res) => {
-  const blockNum = parseInt(req.query.num);
+  const blockNum = parseInt(req.query.num) ? parseInt(req.query.num) : 1;
   const blockData = JSON.parse(req.query.data)
     ? JSON.parse(req.query.data)
     : "";
