@@ -7,13 +7,13 @@ const getRandomInt = (min, max) => {
 
 const cryptoCoin = new BlockChain();
 
-const blockCall = (index, data, previousHash) => {
+const mineCall = (index, data, previousHash) => {
   const block = new Block(index, data, previousHash);
   block.mineBlock(4);
   return JSON.stringify(block, null, 4);
 };
 
-const blockchainCall = (index, data, previousHash) => {
+const chainCall = (index, data, previousHash) => {
   for (let i = index; i <= 5; i++) {
     cryptoCoin.addBlock(new Block(i, data, previousHash));
   }
@@ -21,6 +21,6 @@ const blockchainCall = (index, data, previousHash) => {
 };
 
 module.exports = {
-  blockCall: blockCall,
-  blockchainCall: blockchainCall,
+  mineCall: mineCall,
+  chainCall: chainCall,
 };
