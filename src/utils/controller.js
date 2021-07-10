@@ -5,8 +5,6 @@ const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 };
 
-const cryptoCoin = new BlockChain();
-
 const mineCall = (index, data, previousHash) => {
   const block = new Block(index, data, previousHash);
   block.mineBlock(4);
@@ -14,6 +12,8 @@ const mineCall = (index, data, previousHash) => {
 };
 
 const chainCall = (index, data, previousHash) => {
+  const cryptoCoin = new BlockChain();
+
   for (let i = index; i <= 5; i++) {
     cryptoCoin.addBlock(new Block(i, data, previousHash));
   }

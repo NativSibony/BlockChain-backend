@@ -24,12 +24,10 @@ app.get("/mine", (req, res) => {
   res.send(JSON.parse(result));
 });
 
-app.post("/chain", chain);
-
-function chain(req, res) {
+app.get("/chain", (req, res) => {
   const result = controller.chainCall(2, "", 1);
   res.send(JSON.parse(result));
-}
+});
 
 // app.get("/chain", (req, res) => {});
 
