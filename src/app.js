@@ -8,7 +8,10 @@ app.use(cors());
 
 app.get("/mine", (req, res) => {
   let blockNum, blockData, prevHash;
-  if (!req.query.num) return;
+  if (!req.query.num) {
+    res.send({ badcall: "Error! this call was not sent properly." });
+    return;
+  }
   if (!req.query.data) blockData = "";
   else blockData = JSON.parse(req.query.data);
 
