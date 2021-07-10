@@ -38,7 +38,7 @@ class BlockChain {
   }
 
   createGenesisBlock() {
-    const myBlock = new Block(0, "01/01/2008", "Genesis Block", "0");
+    const myBlock = new Block(1, "", 0);
     myBlock.mineBlock(4);
     return myBlock;
   }

@@ -25,7 +25,7 @@ app.get("/mine", (req, res) => {
 });
 
 app.get("/blockchain", (req, res) => {
-  const ans = controller.blockchainCall(blockNum, null, blockNum);
+  const ans = controller.blockchainCall(2, "", 1);
 
   res.send(JSON.parse(ans));
 });

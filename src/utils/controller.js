@@ -14,8 +14,8 @@ const blockCall = (index, data, previousHash) => {
 };
 
 const blockchainCall = (index, data, previousHash) => {
-  for (let i = 0; i < 5; i++) {
-    cryptoCoin.addBlock(new Block(index, data, previousHash));
+  for (let i = index; i <= 5; i++) {
+    cryptoCoin.addBlock(new Block(i, data, previousHash));
   }
   return JSON.stringify(cryptoCoin, null, 4);
 };
