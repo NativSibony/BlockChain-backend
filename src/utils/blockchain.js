@@ -10,6 +10,11 @@ class Block {
   }
 
   calculateHash() {
+    // console.log(
+    //   typeof this.index,
+    //   typeof this.nonce,
+    //   typeof JSON.stringify(this.data)
+    // );
     return SHA256(
       this.index + this.previousHash + this.nonce + JSON.stringify(this.data)
     ).toString();

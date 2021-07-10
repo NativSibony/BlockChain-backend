@@ -16,9 +16,9 @@ app.get("/mine", (req, res) => {
   else prevHash = parseInt(req.query.prev);
 
   blockNum = parseInt(req.query.num);
-  const ans = controller.blockCall(blockNum, blockData, prevHash);
+  const result = controller.blockCall(blockNum, blockData, prevHash);
 
-  res.send(JSON.parse(ans));
+  res.send(JSON.parse(result));
 });
 
 app.get("/blockchain", (req, res) => {
