@@ -11,11 +11,11 @@ const mineCall = (index, data, previousHash) => {
   return JSON.stringify(block, null, 4);
 };
 
-const chainCall = (index, data, previousHash) => {
+const chainCall = (index, data) => {
   const cryptoCoin = new BlockChain();
 
   for (let i = index; i <= 5; i++) {
-    cryptoCoin.addBlock(new Block(i, data, previousHash));
+    cryptoCoin.addBlock(new Block(i, data));
   }
   return JSON.stringify(cryptoCoin, null, 4);
 };

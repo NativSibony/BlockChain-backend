@@ -15,7 +15,7 @@ app.get("/mine", (req, res) => {
   if (!req.query.data) blockData = "";
   else blockData = JSON.parse(req.query.data);
 
-  if (!req.query.prev) prevHash = 0;
+  if (!req.query.prev) prevHash = "0";
   else prevHash = parseInt(req.query.prev);
 
   blockNum = parseInt(req.query.num);
@@ -25,11 +25,9 @@ app.get("/mine", (req, res) => {
 });
 
 app.get("/chain", (req, res) => {
-  const result = controller.chainCall(2, "", 1);
+  const result = controller.chainCall(2, "");
   res.send(JSON.parse(result));
 });
-
-// app.get("/chain", (req, res) => {});
 
 app.get("*", (req, res) => {
   res.render("404");
