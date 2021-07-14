@@ -20,6 +20,14 @@ const chainCall = (index, data) => {
   return JSON.stringify(cryptoCoin, null, 4);
 };
 
+console.log(
+  mineCall(
+    2,
+    "",
+    "0000ffea52e84b126302f65bcc817e0ad02c80ae466d3c2f96ad5d1111cfcdd8"
+  )
+);
+
 module.exports = {
   mineCall: mineCall,
   chainCall: chainCall,

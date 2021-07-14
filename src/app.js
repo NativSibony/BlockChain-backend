@@ -13,10 +13,10 @@ app.get("/mine", (req, res) => {
     return;
   }
   if (!req.query.data) blockData = "";
-  else blockData = JSON.parse(req.query.data);
+  else blockData = String(req.query.data);
 
   if (!req.query.prev) prevHash = "0";
-  else prevHash = parseInt(req.query.prev);
+  else prevHash = String(req.query.prev);
 
   blockNum = parseInt(req.query.num);
   const result = controller.mineCall(blockNum, blockData, prevHash);
