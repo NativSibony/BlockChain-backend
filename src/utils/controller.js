@@ -20,15 +20,16 @@ const chainCall = (index, data) => {
   return JSON.stringify(cryptoCoin, null, 4);
 };
 
-console.log(
-  mineCall(
-    2,
-    "",
-    "0000ffea52e84b126302f65bcc817e0ad02c80ae466d3c2f96ad5d1111cfcdd8"
-  )
-);
+const tokensCall = (index, data) => {
+  const cryptoCoin = new BlockChain();
+  for (let i = index, j = 0; i <= 4; i++, j++) {
+    cryptoCoin.addBlock(new Block(i, data["section" + j]));
+  }
+  return JSON.stringify(cryptoCoin, null, 4);
+};
 
 module.exports = {
   mineCall: mineCall,
   chainCall: chainCall,
+  tokensCall: tokensCall,
 };

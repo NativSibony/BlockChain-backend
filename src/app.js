@@ -1,7 +1,8 @@
-const controller = require("./utils/controller");
+const { chainCall, mineCall, tokensCall } = require("./utils/controller");
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const data = require("../static/data.json");
 
 const port = process.env.PORT || 3001;
 app.use(cors());
@@ -19,13 +20,18 @@ app.get("/mine", (req, res) => {
   else prevHash = String(req.query.prev);
 
   blockNum = parseInt(req.query.num);
-  const result = controller.mineCall(blockNum, blockData, prevHash);
+  const result = mineCall(blockNum, blockData, prevHash);
 
   res.send(JSON.parse(result));
 });
 
 app.get("/chain", (req, res) => {
-  const result = controller.chainCall(2, "");
+  const result = chainCall(2, "");
+  res.send(JSON.parse(result));
+});
+
+app.get("/tokens", (req, res) => {
+  const result = tokensCall(2, data);
   res.send(JSON.parse(result));
 });
 
