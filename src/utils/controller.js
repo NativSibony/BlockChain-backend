@@ -21,8 +21,16 @@ const chainCall = (index, data) => {
 };
 
 const tokensCall = (index, data) => {
-  const cryptoCoin = new BlockChain();
-  for (let i = index, j = 0; i <= 4; i++, j++) {
+  const cryptoCoin = new BlockChain(data.section0);
+  for (let i = index, j = 1; i <= 3; i++, j++) {
+    cryptoCoin.addBlock(new Block(i, data["section" + j]));
+  }
+  return JSON.stringify(cryptoCoin, null, 4);
+};
+
+const coinbaseCall = (index, data) => {
+  const cryptoCoin = new BlockChain(data.section0);
+  for (let i = index, j = 1; i <= 3; i++, j++) {
     cryptoCoin.addBlock(new Block(i, data["section" + j]));
   }
   return JSON.stringify(cryptoCoin, null, 4);

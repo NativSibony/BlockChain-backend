@@ -26,8 +26,10 @@ class Block {
 }
 
 class BlockChain {
-  constructor() {
-    this.chain = [this.createGenesisBlock()];
+  constructor(data = "") {
+    data === ""
+      ? (this.chain = [this.createGenesisBlock()])
+      : (this.chain = [this.createGenesisBlockWithData(data)]);
     this.difficulty = 4;
   }
 
@@ -37,8 +39,18 @@ class BlockChain {
     return myBlock;
   }
 
+  createGenesisBlockWithData(data) {
+    const myBlock = new Block(1, data, "0");
+    myBlock.mineBlock(4);
+    return myBlock;
+  }
+
   getLatestBlock() {
     return this.chain[this.chain.length - 1];
+  }
+
+  getBlockAtIndex(index) {
+    return this.chain[index];
   }
 
   addBlock(newBlock) {

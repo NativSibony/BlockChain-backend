@@ -1,22 +1,15 @@
 {
     "section0": [
         {
-            "amount": 20,
-            "from": "Jack",
-            "to": "Emily"
-        },
-        {
-            "amount": 5,
-            "from": "Lin",
-            "to": "david"
-        },
-        {
-            "amount": 17,
-            "from": "shimon",
-            "to": "Sam"
+            "from": "shlomi",
+            "to": 100
         }
     ],
     "section1": [
+        {
+            "from": "shlomi",
+            "to": 100
+        },
         {
             "amount": 3,
             "from": "Bil",
@@ -34,6 +27,10 @@
         }
     ],
     "section2": [
+        {
+            "from": "shlomi",
+            "to": 100
+        },
         {
             "amount": 45,
             "from": "Ron",
