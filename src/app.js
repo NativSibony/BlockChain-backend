@@ -56,7 +56,7 @@ app.get("/mineToken", (req, res) => {
   blockNum = parseInt(req.query.num);
   const result = mineCall(blockNum, blockData, prevHash);
 
-  console.log(result);
+  // console.log(result);
   res.send(JSON.parse(result));
 });
 
