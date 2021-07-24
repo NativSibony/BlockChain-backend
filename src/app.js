@@ -15,6 +15,8 @@ app.get("/mine", (req, res) => {
     return;
   }
   if (!req.query.data) blockData = "";
+  else if (req.query.coinbase === 1 || req.query.coinbase === "1")
+    blockData = JSON.parse(req.query.data);
   else blockData = String(req.query.data);
 
   if (!req.query.prev) prevHash = "0";
@@ -38,25 +40,6 @@ app.get("/tokens", (req, res) => {
 
 app.get("/coinbase", (req, res) => {
   const result = tokensCall(2, coinbase);
-  res.send(JSON.parse(result));
-});
-
-app.get("/mineToken", (req, res) => {
-  let blockNum, blockData, prevHash;
-  if (!req.query.num) {
-    res.send({ badcall: "Error! this call was not sent properly." });
-    return;
-  }
-  if (!req.query.data) blockData = "";
-  else blockData = JSON.parse(req.query.data);
-
-  if (!req.query.prev) prevHash = "0";
-  else prevHash = String(req.query.prev);
-
-  blockNum = parseInt(req.query.num);
-  const result = mineCall(blockNum, blockData, prevHash);
-
-  // console.log(result);
   res.send(JSON.parse(result));
 });
 

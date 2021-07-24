@@ -28,14 +28,6 @@ const tokensCall = (index, data) => {
   return JSON.stringify(cryptoCoin, null, 4);
 };
 
-const coinbaseCall = (index, data) => {
-  const cryptoCoin = new BlockChain(data.section0);
-  for (let i = index, j = 1; i <= 3; i++, j++) {
-    cryptoCoin.addBlock(new Block(i, data["section" + j]));
-  }
-  return JSON.stringify(cryptoCoin, null, 4);
-};
-
 module.exports = {
   mineCall: mineCall,
   chainCall: chainCall,
