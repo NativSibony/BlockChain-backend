@@ -4,6 +4,7 @@ const cors = require("cors");
 const app = express();
 const tokens = require("../static/tokens.json");
 const coinbase = require("../static/coinbase.json");
+const final = require("../static/final.json");
 
 const port = process.env.PORT || 3001;
 app.use(cors());
@@ -40,6 +41,11 @@ app.get("/tokens", (req, res) => {
 
 app.get("/coinbase", (req, res) => {
   const result = tokensCall(2, coinbase);
+  res.send(JSON.parse(result));
+});
+
+app.get("/final", (req, res) => {
+  const result = tokensCall(2, final);
   res.send(JSON.parse(result));
 });
 

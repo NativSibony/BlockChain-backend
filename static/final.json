@@ -1,50 +1,62 @@
 {
     "section0": [
         {
-            "from": "shlomi",
-            "to": 100
+            "base": 100,
+            "to": "Shlomi"
         }
     ],
     "section1": [
         {
-            "from": "shlomi",
-            "to": 100
+            "base": 100,
+            "to": "Shlomi"
         },
         {
             "amount": 3,
-            "from": "Bil",
+            "base": "Bil",
             "to": "Emily",
+            "seq": 1,
+            "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
         },
         {
             "amount": 35,
-            "from": "Bob",
-            "to": "Dwayn"
+            "base": "Bob",
+            "to": "Dwayn",
+            "seq": 1,
+            "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
         },
         {
             "amount": 15,
-            "from": "Barbara",
-            "to": "Samantha"
+            "base": "Barbara",
+            "to": "Samantha",
+            "seq": 1,
+            "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
         }
     ],
     "section2": [
         {
-            "from": "shlomi",
-            "to": 100
+            "base": 100,
+            "to": "Shlomi"
         },
         {
             "amount": 45,
-            "from": "Ron",
-            "to": "Amanda"
+            "base": "Ron",
+            "to": "Amanda",
+            "seq": 1,
+            "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
         },
         {
             "amount": 25,
-            "from": "Bell",
-            "to": "Jamie"
+            "base": "Bell",
+            "to": "Jamie",
+            "seq": 1,
+            "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
         },
         {
             "amount": 77,
-            "from": "Barbara",
-            "to": "Sam"
+            "base": "Barbara",
+            "to": "Sam",
+            "seq": 1,
+            "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
         }
     ]
 }

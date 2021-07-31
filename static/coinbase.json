@@ -1,14 +1,14 @@
 {
     "section0": [
         {
-            "from": "shlomi",
-            "to": 100
+            "base": 100,
+            "to": "Shlomi"
         }
     ],
     "section1": [
         {
-            "from": "shlomi",
-            "to": 100
+            "base": 100,
+            "to": "Shlomi"
         },
         {
             "amount": 3,
@@ -28,8 +28,8 @@
     ],
     "section2": [
         {
-            "from": "shlomi",
-            "to": 100
+            "base": 100,
+            "to": "Shlomi"
         },
         {
             "amount": 45,
