@@ -12,21 +12,21 @@
         },
         {
             "amount": 3,
-            "base": "Bil",
+            "from": "Bil",
             "to": "Emily",
             "seq": 1,
             "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
         },
         {
             "amount": 35,
-            "base": "Bob",
+            "from": "Bob",
             "to": "Dwayn",
             "seq": 1,
             "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
         },
         {
             "amount": 15,
-            "base": "Barbara",
+            "from": "Barbara",
             "to": "Samantha",
             "seq": 1,
             "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
@@ -39,21 +39,21 @@
         },
         {
             "amount": 45,
-            "base": "Ron",
+            "from": "Ron",
             "to": "Amanda",
             "seq": 1,
             "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
         },
         {
             "amount": 25,
-            "base": "Bell",
+            "from": "Bell",
             "to": "Jamie",
             "seq": 1,
             "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
         },
         {
             "amount": 77,
-            "base": "Barbara",
+            "from": "Barbara",
             "to": "Sam",
             "seq": 1,
             "sig": "04fe1be031bc7a54d900ff062911bc4f7ba0edb39e4280268e490b79e347e3b8b0019c252aad7536ef7caeb061d558cac2eaec43ff670d76a521bec77c35751310"
